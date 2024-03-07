@@ -1,8 +1,6 @@
-# TODO: Use this file to optionally declare signatures activating your analyzer
-# (instead of, or in addition to, using a well-known port).
-#
-# signature dpd_strrat {
-#     ip-proto == tcp
-#     payload /^\x11\x22\x33\x44/ # TODO: Detect your protocol here.
-#     enable "spicy_STRRAT"
-# }
+signature dpd_strrat {
+    ip-proto == tcp
+    payload /^[0-9]+\x0d\x0a\x0d\x0aping\|STRRAT\|/i
+#    enable "spicy_STRRAT" # Zeek up to v6.1?
+    enable "STRRAT"
+}

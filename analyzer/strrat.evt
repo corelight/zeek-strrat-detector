@@ -1,16 +1,8 @@
 import STRRAT;
 import Zeek_STRRAT;
 
-# TODO: Adjust below how/when the analyzer will be activated. The example
-# defines a well-known port to trigger it. For more information, see:
-#
-#   https://docs.zeek.org/projects/spicy/en/latest/zeek.html#interface-definitions-evt-files
-#
 protocol analyzer STRRAT over TCP:
     parse originator with STRRAT::STRRATMessages,
     parse responder with STRRAT::STRRATMessages;
 
-# TODO: Connect Spicy-side events with Zeek-side events. The example just
-# defines a simple example event that forwards the raw data (which in practice
-# you don't want to do!).
-on STRRAT::STRRATMessages -> event STRRAT::message($conn, $is_orig, self.payload);
+on STRRAT::STRRATMessage -> event STRRAT::message($conn, $is_orig, self.payload);

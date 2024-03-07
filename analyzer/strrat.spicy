@@ -1,7 +1,11 @@
-# TODO: Define your analyzer here.
-
 module STRRAT;
 
 public type STRRATMessages = unit {
-    payload: bytes &eod;
+    : STRRATMessage[];
+};
+
+public type STRRATMessage = unit {
+    len: /[0-9]+/ &convert=cast<uint64>($$.to_int());
+    : /\x0d\x0a\x0d\x0a/;
+    payload: bytes &size=self.len;
 };
