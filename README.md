@@ -1,4 +1,4 @@
-# A Zeek based STRRAT Malware Detector
+# A Zeek Based STRRAT Malware Detector
 
 This is a Zeek Spicy based STRRAT malware detector.
 
