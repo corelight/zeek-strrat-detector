@@ -1,0 +1,7 @@
+# TODO: Define your analyzer here.
+
+module STRRAT;
+
+public type STRRATMessages = unit {
+    payload: bytes &eod;
+};
