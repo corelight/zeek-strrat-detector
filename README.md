@@ -9,7 +9,7 @@ This is a Zeek Spicy based STRRAT malware detector.
 ### Example Output
 
 ```
-% zeek -Cr strrcat-4423258f-59bc-4a88-bfec-d8ac08c88538.pcap zeek-strrat-detector
+% zeek -Cr strrat-4423258f-59bc-4a88-bfec-d8ac08c88538.pcap zeek-strrat-detector
 
 % cat notice.log
 #separator \x09

@@ -4,7 +4,7 @@ module STRRAT;
 
 export {
 	## The notice when STRRAT C2 is observed.
-	redef enum Notice::Type += { C2_Traffic_Observed, };
+	redef enum Notice::Type += { C2_Traffic_Observed };
 }
 
 # Example event defined in strrat.evt.
